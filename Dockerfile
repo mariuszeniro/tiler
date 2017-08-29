@@ -33,17 +33,17 @@ RUN apt-get -y install ca-certificates rpl pwgen
 # The following packages have unmet dependencies:
 # postgresql-9.3-postgis-2.1 : Depends: libgdal1h (>= 1.9.0) but it is not going to be installed
 #                              Recommends: postgis but it is not going to be installed
-RUN apt-get install -y postgresql-9.5-postgis-2.2 netcat
+# RUN apt-get install -y postgresql-9.5-postgis-2.2 netcat
 
 # Run any additional tasks here that are too tedious to put in
 # this dockerfile directly.
-ADD postgis/setup.sh /postgis/setup.sh
-RUN chmod 0755 postgis/setup.sh
-RUN postgis/setup.sh
+# ADD postgis/setup.sh /postgis/setup.sh
+# RUN chmod 0755 postgis/setup.sh
+# RUN postgis/setup.sh
 
 # We will run any commands in this when the container starts
-ADD postgis/start-postgis.sh /postgis/start-postgis.sh
-RUN chmod 0755 /postgis/start-postgis.sh
+# ADD postgis/start-postgis.sh /postgis/start-postgis.sh
+# RUN chmod 0755 /postgis/start-postgis.sh
 
 ### GDAL Specific Code
 RUN apt-get install gdal-bin
