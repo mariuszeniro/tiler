@@ -5,6 +5,7 @@ MAINTAINER James Milner<james.milner@geovation.uk>
 RUN  export DEBIAN_FRONTEND=noninteractive
 ENV  DEBIAN_FRONTEND noninteractive
 RUN  dpkg-divert --local --rename --add /sbin/initctl
+RUN apt-get -y install gnupg
 # USER root
 #RUN  ln -s /bin/true /sbin/initctl
 
