@@ -46,7 +46,7 @@ RUN apt-get -y install ca-certificates rpl pwgen
 # RUN chmod 0755 /postgis/start-postgis.sh
 
 ### GDAL Specific Code
-RUN apt-get install gdal-bin
+RUN apt-get install -y gdal-bin
 
 ### Python
 RUN apt-get install -y python-pip libpq-dev python-dev
